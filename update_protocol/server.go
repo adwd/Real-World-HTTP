@@ -21,7 +21,6 @@ func handlerUpgrade(w http.ResponseWriter, r *http.Request) {
 	conn, readWriter, err := hijacker.Hijack()
 	if err != nil {
 		panic(err)
-		return
 	}
 	defer conn.Close()
 
